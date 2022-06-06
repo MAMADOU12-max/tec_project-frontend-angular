@@ -1,0 +1,34 @@
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+  
+
+a {
+    font-size:14px;
+    font-weight:700;
+    text-decoration: none;
+}
+.superNav, .navbar,.btn-customize {
+    background: #24C6DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.superNav {
+    font-size:13px;
+}
+.form-control {
+    outline:none !important;
+    box-shadow: none !important;
+}
+@media screen and (max-width:540px){
+    .centerOnMobile {
+      text-align:center
+    }
+}

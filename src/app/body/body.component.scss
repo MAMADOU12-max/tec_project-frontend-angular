@@ -1,0 +1,18 @@
+a{
+    text-decoration: none;
+    color: black;
+    .card {
+        border: none;
+        &:hover {
+            i,.icon_image {
+                //    background-color: aquamarine; 
+                transform: rotate(360deg);
+                transition: transform 400ms;
+            }
+        }
+        .icon_image {
+            width: 85px;
+        }
+    }
+}
+
