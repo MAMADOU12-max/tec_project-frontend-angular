@@ -1,3 +1,5 @@
+$primary-color: #514A9D;
+
 a{
     text-decoration: none;
     color: black;
@@ -7,7 +9,25 @@ a{
             i,.icon_image {
                 //    background-color: aquamarine; 
                 transform: rotate(360deg);
-                transition: transform 400ms;
+                transition: transform 500ms;
+            }
+        }
+        &.range{
+            box-shadow: -1px -1px gray, 1px 0 5px rgb(133, 125, 125);
+            &:hover {
+                background: #24C6DC;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, $primary-color, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, $primary-color, #24C6DC); 
+                // color: #514A9D;
+                i, .read-more {
+                    color: white;
+                }
+                .card-title {
+                    color: $primary-color;
+                }
+                .image-overlay {
+                    // background-color: #04AA6D;
+                }
             }
         }
         .icon_image {
@@ -16,3 +36,40 @@ a{
     }
 }
 
+// overlay code
+.container-overlay {
+    position: relative;
+    &:hover .image {
+        opacity: 0.3;
+    }
+    
+    &:hover .middle {
+        opacity: 1;
+    }
+}
+  
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    & .text {
+        color: white;
+        font-size: 40px;
+    }
+}
+  
+  
