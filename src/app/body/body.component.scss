@@ -1,4 +1,21 @@
+// VARIABLES
 $primary-color: #514A9D;
+$mean-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+// MIXINS
+@mixin adapt_color {
+    background-color: $primary-color;
+    color: white;
+}             
+@mixin mean_background {
+    background: #24C6DC;  
+    background: -webkit-linear-gradient(to left, #514A9D, #24C6DC);  
+    background: linear-gradient(to left, #514A9D, #24C6DC);  
+}
+
+.mean_background {
+    @include mean_background();
+}
 
 a{
     text-decoration: none;
@@ -7,13 +24,13 @@ a{
         border: none;
         &:hover {
             i,.icon_image {
-                //    background-color: aquamarine; 
                 transform: rotate(360deg);
                 transition: transform 500ms;
             }
         }
         &.range{
-            box-shadow: -1px -1px gray, 1px 0 5px rgb(133, 125, 125);
+            // box-shadow: -1px -1px gray, 1px 0 5px rgb(133, 125, 125);
+            box-shadow: $mean-box-shadow;
             &:hover {
                 background: #24C6DC;  /* fallback for old browsers */
                 background: -webkit-linear-gradient(to left, $primary-color, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
@@ -25,9 +42,7 @@ a{
                 .card-title {
                     color: $primary-color;
                 }
-                .image-overlay {
-                    // background-color: #04AA6D;
-                }
+                .image-overlay {}
             }
         }
         .icon_image {
@@ -52,7 +67,7 @@ a{
     opacity: 1;
     display: block;
     width: 100%;
-    height: auto;
+    height: 250px;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -73,3 +88,180 @@ a{
 }
   
   
+.nav-item {
+    box-shadow: $mean-box-shadow;
+    color: black;
+    & .nav-link {
+        color: black;
+         transition: .5s;
+         transition-timing-function: linear;
+        &:hover {
+            color: white;
+            transition: all 1s;
+            // border: 1px solid $primary-color;
+            background-color: rgba(#514A9D, 0.6);
+        }
+    }
+    
+    & .active {
+        @include adapt_color();
+        border-color:$primary-color;
+        transition: .4s  ease-in;       
+    }
+
+    &:hover .nav-link.active::before {
+        // opacity: .7;
+        // transform: scale(1);
+        width: 100%;
+        background-color: #24C6DC;
+        transition: width 2s;
+    }
+
+   
+}
+
+.img-panel_tab {
+    background: url('../../assets/images/taylorswimming.png') center center / cover no-repeat ;
+    height: 50vh;
+    & .text-above-img_tab {
+        display: none;
+    }
+    opacity: 1;
+    transition: all 400s;
+    &:hover {
+
+        transition: all 400s;
+        & .text-above-img_tab {
+            display: block;
+            background-color: #24C6DC;
+            top: 123px;
+            transform: translateY(-20px) ;
+        } 
+    }   
+}
+
+
+//  ------------------------------------------------- overlay box tab ------------------------------------------ //
+.box-tab {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    transition: .5s;
+    .box-tab__img img {}
+    &:hover .box-tab__img {
+        transform: scale(1.2);   
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: 1s;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: $primary-color;
+            mix-blend-mode: multiply;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        & img {
+            position: relative;
+            top: 0;
+            left: 0;
+            // width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+    // call  before built after hover
+    &:hover .box-tab__img::before {
+        opacity: .6;
+    } 
+    // translate text
+    &:hover .box-tab__overlay-text .box-tab__overlay-text__content {
+        transform: translateY(10px);
+    } 
+
+    &__overlay-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        padding: 20px;
+        align-items: flex-end;
+        justify-content: center;
+        & .box-tab__overlay-text__content{
+            transition: .5s;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: #fff;
+            transform: translateY(200px);
+            text-align: center;
+            & p {
+                font-size: 12px;
+            }
+            & h4 {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+// slick
+// slick-slider {
+//     width: 88%;
+//     margin: auto;
+//     background: rgb(14, 13, 13);
+//   }
+  
+// .slick-prev, 
+// .slick-next {
+//     height: 45px;
+//     width: 40px;
+//     background: grey !important;
+//     z-index: 100;
+// }
+
+.surligned {
+    // border-bottom: 2px solid red;
+    width: 6%;
+    margin: 10px auto;
+    @include mean_background();
+    height: 3px;
+}
+
+//  Media query
+@media only screen and (max-width: 567px) {
+    .nav-item {
+        width: 85% !important;
+        margin: 5px;
+        .nav-link {
+            width: 100%;
+        }
+    }   
+    .box-tab__overlay-text {
+        top: -203px;
+        // background-color: #24C6DC;
+        
+        & .box-tab__overlay-text__content{
+            background-color: rgba(#514A9D, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            width: 90%;
+        }
+    }
+
+}

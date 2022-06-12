@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare const myFun:any;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  callFun() {
+    myFun() ;
+  }
   title = 'tec_project-frontend-angular';
 }
