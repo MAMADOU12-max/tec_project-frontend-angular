@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AgmCoreModule } from '@agm/core';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
-    CarouselModule
+    CarouselModule,
+    AgmCoreModule.forRoot({
+      apiKey: `${environment.GoogleApikey}`
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

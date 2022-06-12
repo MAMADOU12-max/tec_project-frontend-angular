@@ -24,19 +24,33 @@ $mean-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 
 
 
 //  ow carousel css 
+.owl-theme .owl-nav {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+    // background: red;
+    top: -255px;
+    width: 104% !important;
+    margin-left: -30px;
+}
 .owl-theme .owl-nav [class*="owl-"] {
     color: #FFF;
     font-size: 14px;
     margin: 5px;
     padding: 4px 7px;
-    background: white !important;
-    display: inline-block;
+    background: none !important;
+    display: flex;
     cursor: pointer;
     border-radius: 3px;
 }
 
-// arrow 
-.positionned_arrow{
-    display: flex;
-    text-align: end;
+
+//  Media query
+@media only screen and (max-width: 567px) {
+    .owl-theme .owl-nav {
+        margin-left: 0px;
+        width: 100% !important;
+    }
+
 }
