@@ -45,7 +45,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SlickCarouselModule,
     CarouselModule,
     AgmCoreModule.forRoot({
-      apiKey: `${environment.GoogleApikey}`
+      apiKey: 'AIzaSyAcV5DOSUL5S02FONJ2ElReoFpYY6wkqc4'
+      // apiKey: `${environment.GoogleApikey}`
     })
   ],
   providers: [],
