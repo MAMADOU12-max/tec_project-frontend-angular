@@ -1,0 +1,35 @@
+<!-- ----------------------------------------------- Start Map secion ------------------------------------------------ -->
+<section>
+    <div class="container-fluid my-4">
+        <div class="row">
+            <div class="col-12 map px-0">
+               <agm-map [latitude]="lat" [longitude]="lng" style="height: 400px;">
+                   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                 </agm-map>
+            </div>             
+        </div>
+    </div>
+</section>
+<!-- ------------------------------------------------ End  Map secion ------------------------------------------------ -->
+
+
+
+<!-- ------------------------------------------------ Start subscribe ------------------------------------------------ -->
+<section>
+   <div class="container-fluid my-5">
+       <div class="row d-flex justify-content-center text-center">
+           <div class="col-12 col-md-4">
+               <h2 class="text-uppercase fw-bold">Ne le manquer pas</h2>
+               <p>Abonnez vous à notre newsletter</p>
+               <div class="input-group mb-3" style="height: 55px;">
+                   <input type="text" class="form-control rounded rounded-pill border border-2 h-100" placeholder="Adress email">
+                   <div class="input-group-append" style="margin-left: -50px">
+                       <button class="btn mean_background rounded rounded-pill fw-bold text-white h-100 px-md-5 px-3"
+                        type="button">S'abonner</button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+<!-- ------------------------------------------------ End  subscribe ------------------------------------------------- -->

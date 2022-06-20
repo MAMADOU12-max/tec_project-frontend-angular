@@ -1,0 +1,29 @@
+.img-slide {
+    max-height: 500px !important;
+}
+
+.sidebar {
+    min-width: 318px;
+    max-width: 318px;
+
+    hr.h-color {
+        background-color: aliceblue;
+    }
+    
+    & ul {
+        & li.active {
+            background-color: aliceblue;
+            border-radius: 8px;           
+            a, a:hover {
+                color: white
+            }
+        }
+    }
+    
+}
+
+.content {
+    min-height: 100vh;
+    width: 100%;
+}
+

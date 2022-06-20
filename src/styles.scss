@@ -45,6 +45,28 @@ $mean-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 
     border-radius: 3px;
 }
 
+// arrow slick slider
+.positionned_arrow {
+    position: absolute;
+    top: 120px;
+    z-index: 1;
+
+     &.fa-arrow-left  {
+        left: 5px;
+    }
+    &.fa-arrow-right {
+        right: 5px;   
+    }
+}
+
+// line under great titles
+.surligned {
+    // border-bottom: 2px solid red;
+    width: 6%;
+    margin: 10px auto;
+    @include mean_background();
+    height: 3px;
+}
 
 //  Media query
 @media only screen and (max-width: 567px) {

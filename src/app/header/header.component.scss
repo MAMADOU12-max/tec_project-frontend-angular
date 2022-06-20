@@ -4,24 +4,6 @@
     background: linear-gradient(to left, #514A9D, #24C6DC);  
 }
 
-.carousel-item {
-    height: 65vh;
-    min-height: 350px;
-    background: no-repeat center center scroll;
-    
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.carousel__content-text {
-    // @include mean_background();
-    background-color: rgba(#24C6DC, 0.5);
-    position: relative;
-    padding: 15px;
-    border-radius: 23px;
-}
-
 a {
     font-size:14px;
     font-weight:700;
@@ -33,12 +15,12 @@ a {
 .superNav {
     font-size:13px;
 }
-.form-control {
-    outline:none !important;
-    box-shadow: none !important;
-}
+// .form-control {
+//     outline:none !important;
+//     box-shadow: none !important;
+// }
 @media screen and (max-width:540px){
-    .centerOnMobile {
-      text-align:center
-    }
+    // .centerOnMobile {
+    //   text-align:center
+    // }
 }

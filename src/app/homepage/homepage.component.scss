@@ -27,7 +27,7 @@ a{
                 transform: rotate(360deg);
                 transition: transform 500ms;
             }
-        }
+        }                                                                                                           
         &.range{
             // box-shadow: -1px -1px gray, 1px 0 5px rgb(133, 125, 125);
             box-shadow: $mean-box-shadow;
@@ -235,13 +235,13 @@ a{
 //     z-index: 100;
 // }
 
-.surligned {
-    // border-bottom: 2px solid red;
-    width: 6%;
-    margin: 10px auto;
-    @include mean_background();
-    height: 3px;
-}
+// .surligned {
+//     // border-bottom: 2px solid red;
+//     width: 6%;
+//     margin: 10px auto;
+//     @include mean_background();
+//     height: 3px;
+// }
 
 //  Media query
 @media only screen and (max-width: 567px) {

@@ -1,0 +1,18 @@
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 300px 2px;
+
+    .carousel__content-text {
+        background-color: rgba(#24C6DC, 0.5);
+        position: relative;
+        padding: 15px;
+        border-radius: 23px;
+        // margin: 123px 1px;
+    }
+}
