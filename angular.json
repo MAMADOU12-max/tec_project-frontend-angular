@@ -119,5 +119,8 @@
       }
     }
   },
-  "defaultProject": "tec_project-frontend-angular"
+  "defaultProject": "tec_project-frontend-angular",
+  "cli": {
+    "analytics": "1dd57e82-1c6a-47e1-bc2b-12de003bcd16"
+  }
 }
